@@ -16,6 +16,8 @@ import androidx.fragment.app.Fragment;
 import com.example.criminalintent.Crime;
 import com.example.criminalintent.R;
 
+import java.text.DateFormat;
+import java.util.Locale;
 import java.util.UUID;
 
 import static android.widget.CompoundButton.OnCheckedChangeListener;
@@ -73,6 +75,7 @@ public class CrimeFragment extends Fragment {
         mDateButton = (Button) v.findViewById(R.id.crime_date);
         mDateButton.setText(mCrime.getDate().toString());
         mDateButton.setEnabled(false);
+
 
         mSolvedCheckBox = (CheckBox)v.findViewById(R.id.crime_solved);
         mSolvedCheckBox.setChecked(mCrime.isSolved());

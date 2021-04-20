@@ -3,6 +3,7 @@ package com.example.criminalintent;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
@@ -33,12 +34,15 @@ public class CrimeLab {
     }
 
     public Crime getCrime(UUID id) {
+        int counter = 0;
+        ArrayList<UUID> tags = new ArrayList<UUID>();
         for (Crime crime : mCrimes) {
-            if (crime.getId().equals(id)) {
-                return crime;
-            }
+            tags.add(crime.getId());
         }
 
-        return null;
+        int loc = tags.indexOf(id);
+
+        Crime thisCrime = mCrimes.get(loc);
+        return thisCrime;
     }
 }

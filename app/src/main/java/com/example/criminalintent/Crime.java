@@ -1,6 +1,10 @@
 package com.example.criminalintent;
 
+import android.content.Context;
+
+import java.text.DateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.UUID;
 
 public class Crime {
@@ -12,7 +16,6 @@ public class Crime {
     public Crime() {
         mId = UUID.randomUUID();
         mDate = new Date();
-
     }
 
     public UUID getId() {
